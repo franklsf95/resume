@@ -1,4 +1,4 @@
-SRC = CV_201409
+SRC = Frank\ Luan
 
 compile:
 	xelatex $(SRC).tex && open $(SRC).pdf
