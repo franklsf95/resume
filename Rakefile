@@ -4,6 +4,7 @@
 name = 'Frank Luan'
 src = '_source'
 
+desc 'Render using XeLaTex, specify version by appending V='
 task :default do
   ver = ENV['V'] || 'screen'
   filename = "#{name} (#{ver})"
@@ -15,6 +16,7 @@ task :default do
   `open "#{filename}.pdf"`
 end
 
+desc 'Cleans up temporary files'
 task :clean do
   puts 'Cleaning up...'
   `rm _a.*`
