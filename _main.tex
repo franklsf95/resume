@@ -1,0 +1,63 @@
+\documentclass[10pt]{article}
+
+\usepackage{fancyhdr}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{parskip}
+\usepackage{titlesec}
+
+% Remove leading indents
+\setlength{\parindent}{0pt}
+
+% Section title formatting
+\titleformat{\section}
+  {\normalfont\Large\bfseries} % format
+  {} % label
+  {} % sep
+  {} % before
+  [{\titlerule[1pt]}] % after
+\titlespacing*{\section}
+  {0pt} % left
+  {0pt} % before
+  {10pt plus 2pt minus 2pt} % after
+
+% CV item definitions
+\newcommand{\cvtitle}[1]{\def\cvtitleval{#1}}
+\newcommand{\cvtitleright}[1]{\def\cvtitlerightval{#1}}
+\newcommand{\cvsubtitle}[1]{\def\cvsubtitleval{#1}}
+\newcommand{\cvsubtitleright}[1]{\def\cvsubtitlerightval{#1}}
+\newcommand{\cvbody}[1]{\def\cvbodyval{#1}}
+\newcommand{\clearcvitem}{
+    \def\cvtitleval{}
+    \def\cvtitlerightval{}
+    \def\cvsubtitleval{}
+    \def\cvsubtitlerightval{}
+    \def\cvbodyval{}
+}
+\newenvironment{cvitem}{% before
+\clearcvitem
+}{% after
+\par
+\textbf{\cvtitleval} \hfill \cvtitlerightval \\
+\textit{\cvsubtitleval} \hfill \cvsubtitlerightval \\
+\cvbodyval
+}
+
+\begin{document}
+
+\begin{center}
+    \huge\textbf{Sifei Luan}
+\end{center}
+
+\vspace{8pt}
+
+%% ------------------------------------------------------------
+%%    Education
+%% ------------------------------------------------------------
+
+\input{education.tex}
+\input{experience.tex}
+\input{publications.tex}
+
+\end{document}
