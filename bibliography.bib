@@ -1,0 +1,135 @@
+@inproceedings{exoshuffle,
+  author    = {Luan, Frank Sifei and Wang, Stephanie and Yagati, Samyukta and Kim, Sean and Lien, Kenneth and Ong, Isaac and Hong, Tony and Cho, Sangbin and Liang, Eric and Stoica, Ion},
+  title     = {Exoshuffle: An Extensible Shuffle Architecture},
+  year      = {2023},
+  isbn      = {9798400702365},
+  publisher = {Association for Computing Machinery},
+  address   = {New York, NY, USA},
+  url       = {https://doi.org/10.1145/3603269.3604848},
+  doi       = {10.1145/3603269.3604848},
+  abstract  = {Shuffle is one of the most expensive communication primitives in distributed data processing and is difficult to scale. Prior work addresses the scalability challenges of shuffle by building monolithic shuffle systems. These systems are costly to develop, and they are tightly integrated with batch processing frameworks that offer only high-level APIs such as SQL. New applications, such as ML training, require more flexibility and finer-grained interoperability with shuffle. They are often unable to leverage existing shuffle optimizations.We propose an extensible shuffle architecture. We present Exoshuffle, a library for distributed shuffle that offers competitive performance and scalability as well as greater flexibility than monolithic shuffle systems. We design an architecture that decouples the shuffle control plane from the data plane without sacrificing performance. We build Exoshuffle on Ray, a distributed futures system for data and ML applications, and demonstrate that we can: (1) rewrite previous shuffle optimizations as application-level libraries with an order of magnitude less code, (2) achieve shuffle performance and scalability competitive with monolithic shuffle systems, and break the CloudSort record as the world's most cost-efficient sorting system, and (3) enable new applications such as ML training to easily leverage scalable shuffle.},
+  booktitle = {Proceedings of the ACM SIGCOMM 2023 Conference},
+  pages     = {564--577},
+  numpages  = {14},
+  keywords  = {shuffle, mapreduce, distributed computing, extensibility},
+  location  = {New York, NY, USA},
+  series    = {ACM SIGCOMM '23}
+}
+
+@misc{exoshufflecloudsort,
+  title         = {Exoshuffle-CloudSort},
+  author        = {Frank Sifei Luan and Stephanie Wang and Samyukta Yagati and Sean Kim and Kenneth Lien and Isaac Ong and Tony Hong and SangBin Cho and Eric Liang and Ion Stoica},
+  year          = {2023},
+  eprint        = {2301.03734},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.DC},
+  url           = {https://arxiv.org/abs/2301.03734}
+}
+
+@inproceedings{skypilot,
+  author    = {Zongheng Yang and Zhanghao Wu and Michael Luo and Wei-Lin Chiang and Romil Bhardwaj and Woosuk Kwon and Siyuan Zhuang and Frank Sifei Luan and Gautam Mittal and Scott Shenker and Ion Stoica},
+  title     = {{SkyPilot}: An Intercloud Broker for Sky Computing},
+  booktitle = {20th USENIX Symposium on Networked Systems Design and Implementation (NSDI 23)},
+  year      = {2023},
+  isbn      = {978-1-939133-33-5},
+  address   = {Boston, MA},
+  pages     = {437--455},
+  url       = {https://www.usenix.org/conference/nsdi23/presentation/yang-zongheng},
+  publisher = {USENIX Association},
+  month     = apr
+}
+
+@inproceedings{balsa,
+  author    = {Yang, Zongheng and Chiang, Wei-Lin and Luan, Sifei and Mittal, Gautam and Luo, Michael and Stoica, Ion},
+  title     = {Balsa: Learning a Query Optimizer Without Expert Demonstrations},
+  year      = {2022},
+  isbn      = {9781450392495},
+  publisher = {Association for Computing Machinery},
+  address   = {New York, NY, USA},
+  url       = {https://doi.org/10.1145/3514221.3517885},
+  doi       = {10.1145/3514221.3517885},
+  abstract  = {Query optimizers are a performance-critical component in every database system. Due to their complexity, optimizers take experts months to write and years to refine. In this work, we demonstrate for the first time that learning to optimize queries without learning from an expert optimizer is both possible and efficient. We present Balsa, a query optimizer built by deep reinforcement learning. Balsa first learns basic knowledge from a simple, environment-agnostic simulator, followed by safe learning in real execution. On the Join Order Benchmark, Balsa matches the performance of two expert query optimizers, both open-source and commercial, with two hours of learning, and outperforms them by up to 2.8\texttimes{} in workload runtime after a few more hours. Balsa thus opens the possibility of automatically learning to optimize in future compute environments where expert-designed optimizers do not exist.},
+  booktitle = {Proceedings of the 2022 International Conference on Management of Data},
+  pages     = {931--944},
+  numpages  = {14},
+  keywords  = {machine learning for systems, learned query optimization},
+  location  = {Philadelphia, PA, USA},
+  series    = {SIGMOD '22}
+}
+
+@article{aisefb,
+  author   = {Bader, Johannes and Seohyun Kim, Sonia and Sifei Luan, Frank and Chandra, Satish and Meijer, Erik},
+  journal  = {IEEE Software},
+  title    = {AI in Software Engineering at Facebook},
+  year     = {2021},
+  volume   = {38},
+  number   = {4},
+  pages    = {52-61},
+  keywords = {Social networking (online);Software tools;Training;Licenses;Data mining;Software engineering;Software development management},
+  doi      = {10.1109/MS.2021.3061664}
+}
+
+@inproceedings{ownership,
+  author    = {Stephanie Wang and Eric Liang and Edward Oakes and Ben Hindman and Frank Sifei Luan and Audrey Cheng and Ion Stoica},
+  title     = {Ownership: A Distributed Futures System for {Fine-Grained} Tasks},
+  booktitle = {18th USENIX Symposium on Networked Systems Design and Implementation (NSDI 21)},
+  year      = {2021},
+  isbn      = {978-1-939133-21-2},
+  pages     = {671--686},
+  url       = {https://www.usenix.org/conference/nsdi21/presentation/cheng},
+  publisher = {USENIX Association}
+}
+
+@article{neurocard,
+  author     = {Yang, Zongheng and Kamsetty, Amog and Luan, Sifei and Liang, Eric and Duan, Yan and Chen, Xi and Stoica, Ion},
+  title      = {NeuroCard: one cardinality estimator for all tables},
+  year       = {2020},
+  issue_date = {September 2020},
+  publisher  = {VLDB Endowment},
+  volume     = {14},
+  number     = {1},
+  issn       = {2150-8097},
+  url        = {https://doi.org/10.14778/3421424.3421432},
+  doi        = {10.14778/3421424.3421432},
+  abstract   = {Query optimizers rely on accurate cardinality estimates to produce good execution plans. Despite decades of research, existing cardinality estimators are inaccurate for complex queries, due to making lossy modeling assumptions and not capturing inter-table correlations. In this work, we show that it is possible to learn the correlations across all tables in a database without any independence assumptions. We present NeuroCard, a join cardinality estimator that builds a single neural density estimator over an entire database. Leveraging join sampling and modern deep autoregressive models, NeuroCard makes no inter-table or inter-column independence assumptions in its probabilistic modeling. NeuroCard achieves orders of magnitude higher accuracy than the best prior methods (a new state-of-the-art result of 8.5x maximum error on JOB-light), scales to dozens of tables, while being compact in space (several MBs) and efficient to construct or update (seconds to minutes).},
+  journal    = {Proc. VLDB Endow.},
+  pages      = {61--73},
+  numpages   = {13}
+}
+
+@article{aroma,
+  author     = {Luan, Sifei and Yang, Di and Barnaby, Celeste and Sen, Koushik and Chandra, Satish},
+  title      = {Aroma: code recommendation via structural code search},
+  year       = {2019},
+  issue_date = {October 2019},
+  publisher  = {Association for Computing Machinery},
+  address    = {New York, NY, USA},
+  volume     = {3},
+  number     = {OOPSLA},
+  url        = {https://doi.org/10.1145/3360578},
+  doi        = {10.1145/3360578},
+  abstract   = {Programmers often write code that has similarity to existing code written somewhere. A tool that could help programmers to search such similar code would be immensely useful. Such a tool could help programmers to extend partially written code snippets to completely implement necessary functionality, help to discover extensions to the partial code which are commonly included by other programmers, help to cross-check against similar code written by other programmers, or help to add extra code which would fix common mistakes and errors. We propose Aroma, a tool and technique for code recommendation via structural code search. Aroma indexes a huge code corpus including thousands of open-source projects, takes a partial code snippet as input, searches the corpus for method bodies containing the partial code snippet, and clusters and intersects the results of the search to recommend a small set of succinct code snippets which both contain the query snippet and appear as part of several methods in the corpus. We evaluated Aroma on 2000 randomly selected queries created from the corpus, as well as 64 queries derived from code snippets obtained from Stack Overflow, a popular website for discussing code. We implemented Aroma for 4 different languages, and developed an IDE plugin for Aroma. Furthermore, we conducted a study where we asked 12 programmers to complete programming tasks using Aroma, and collected their feedback. Our results indicate that Aroma is capable of retrieving and recommending relevant code snippets efficiently.},
+  journal    = {Proc. ACM Program. Lang.},
+  month      = {oct},
+  articleno  = {152},
+  numpages   = {28},
+  keywords   = {structural code search, feature-based code representation, code recommendation, clustering, clone detection}
+}
+
+@inproceedings{ncs,
+  author    = {Sachdev, Saksham and Li, Hongyu and Luan, Sifei and Kim, Seohyun and Sen, Koushik and Chandra, Satish},
+  title     = {Retrieval on source code: a neural code search},
+  year      = {2018},
+  isbn      = {9781450358347},
+  publisher = {Association for Computing Machinery},
+  address   = {New York, NY, USA},
+  url       = {https://doi.org/10.1145/3211346.3211353},
+  doi       = {10.1145/3211346.3211353},
+  abstract  = {Searching over large code corpora can be a powerful productivity tool for both beginner and experienced developers because it helps them quickly find examples of code related to their intent. Code search becomes even more attractive if developers could express their intent in natural language, similar to the interaction that Stack Overflow supports. In this paper, we investigate the use of natural language processing and information retrieval techniques to carry out natural language search directly over source code, i.e. without having a curated Q&A forum such as Stack Overflow at hand. Our experiments using a benchmark suite derived from Stack Overflow and GitHub repositories show promising results. We find that while a basic word–embedding based search procedure works acceptably, better results can be obtained by adding a layer of supervision, as well as by a customized ranking strategy.},
+  booktitle = {Proceedings of the 2nd ACM SIGPLAN International Workshop on Machine Learning and Programming Languages},
+  pages     = {31–41},
+  numpages  = {11},
+  keywords  = {word-embedding, code search, TF-IDF},
+  location  = {Philadelphia, PA, USA},
+  series    = {MAPL 2018}
+}

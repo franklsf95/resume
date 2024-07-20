@@ -1,18 +1,34 @@
 \documentclass[10pt]{article}
 
+\usepackage[
+  backend=biber,
+  doi=false,
+  isbn=false,
+  maxbibnames=99,
+  sorting=ydnt,
+  url=false,
+]{biblatex}
+\usepackage{enumitem}
 \usepackage{fancyhdr}
 \usepackage[margin=0.75in]{geometry}
 \usepackage{hyperref}
-\usepackage{graphicx}
 \usepackage{parskip}
 \usepackage{titlesec}
+
+% Bibliography
+\addbibresource{bibliography.bib}
+
+% Itemized lists
+\setlist{parsep=1pt}
+\setlist[itemize]{leftmargin=*}
+\renewcommand{\labelitemi}{$\circ$}
 
 % Remove leading indents
 \setlength{\parindent}{0pt}
 
 % Section title formatting
 \titleformat{\section}
-  {\normalfont\Large\bfseries} % format
+  {\normalfont\large\scshape} % format
   {} % label
   {} % sep
   {} % before
@@ -20,7 +36,7 @@
 \titlespacing*{\section}
   {0pt} % left
   {0pt} % before
-  {10pt plus 2pt minus 2pt} % after
+  {8pt plus 2pt minus 2pt} % after
 
 % CV item definitions
 \newcommand{\cvtitle}[1]{\def\cvtitleval{#1}}
@@ -40,14 +56,14 @@
 }{% after
 \par
 \textbf{\cvtitleval} \hfill \cvtitlerightval \\
-\textit{\cvsubtitleval} \hfill \cvsubtitlerightval \\
-\cvbodyval
+\textit{\cvsubtitleval} \hfill \cvsubtitlerightval
+\ifx\cvbodyval\empty\else\\\cvbodyval\fi
 }
 
 \begin{document}
 
 \begin{center}
-    \huge\textbf{Sifei Luan}
+  {\Huge \bfseries Sifei Luan}
 \end{center}
 
 \vspace{8pt}
@@ -57,7 +73,10 @@
 %% ------------------------------------------------------------
 
 \input{education.tex}
+\input{awards.tex}
 \input{experience.tex}
 \input{publications.tex}
+\input{talks.tex}
+\input{services.tex}
 
 \end{document}
